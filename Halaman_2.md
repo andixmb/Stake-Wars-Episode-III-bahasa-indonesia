@@ -136,17 +136,27 @@ cd ~/nearcore
 ./target/release/neard --home ~/.near run
 ```
 
-![img](./images/download.png)
-The node is now running you can see log outputs in your console. Your node should be find peers, download headers to 100%, and then download blocks.
+<img width="1510" alt="download" src="https://user-images.githubusercontent.com/55140596/180240793-807762d1-d863-494f-b7d3-3d7078774f8e.png">
 
+Node sedang berjalan, Anda dapat melihat output log di konsol Anda. Node Anda harus menemukan rekan, mengunduh HEADERS hingga 100%, dan kemudian mengunduh blok.
 ----
+LIHAT HEADERS DOWNLOAD
+<img width="358" alt="Jepretan Layar 2022-07-21 pukul 16 55 31" src="https://user-images.githubusercontent.com/55140596/180241246-3a143ec2-59c1-40db-b3d1-3863ed606172.png">
 
+LOG JIKA HEADER SUDAH TERINSTAL DAN MELANJUTKAN DOWNLOAD BLOCK
+![0476ec55-b827-4365-8258-05d97edb3d98](https://user-images.githubusercontent.com/55140596/180241813-af36e65d-a06b-4871-8035-5d2ad85419ba.jpeg)
 
+LOG DOWNLOAD BLOCK SELESAI 100%
+<img width="618" alt="Jepretan Layar 2022-07-21 pukul 16 55 12" src="https://user-images.githubusercontent.com/55140596/180242032-2d4e8a47-d95b-4da4-b4c8-62b9aa949697.png">
 
-### Activating the node as validator
-##### Authorize Wallet Locally
-A full access key needs to be installed locally to be able to sign transactions via NEAR-CLI.
+SETELAH SEMUANYA SIAP KELUAR DARI LOG
+````
+ctrl + c
+````
 
+### Mengaktifkan node sebagai validator
+##### Otorisasi Dompet Secara Lokal
+Kunci akses penuh perlu diinstal secara lokal untuk dapat menandatangani transaksi melalui NEAR-CLI.
 
 * You need to run this command:
 
@@ -154,24 +164,27 @@ A full access key needs to be installed locally to be able to sign transactions 
 near login
 ```
 
-> Note: This command launches a web browser allowing for the authorization of a full access key to be copied locally.
+> Catatan: Perintah ini meluncurkan browser web yang memungkinkan otorisasi kunci akses penuh untuk disalin secara lokal.
 
-1 – Copy the link in your browser
+1 – Salin tautan ke browser Anda
 
 
-![img](./images/1.png)
+![1](https://user-images.githubusercontent.com/55140596/180243116-711d5c35-eaec-4dfc-81f6-c87225d4ecfa.png)
 
 2 – Grant Access to Near CLI
 
-![img](./images/3.png)
+![3](https://user-images.githubusercontent.com/55140596/180243146-f67ae837-4b06-4917-ab6d-c6d4e4ae5aad.png)
 
 3 – After Grant, you will see a page like this, go back to console
 
-![img](./images/4.png)
+![4](https://user-images.githubusercontent.com/55140596/180243152-396aaa63-f166-4984-a0d1-94dc56173db5.png)
 
 4 – Enter your wallet and press Enter
 
-![img](./images/5.png)
+![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
+
+catatan :
+jika terjadi error saat login wallet ulangi dari awal dan lakukan otorisasi wallet dengan browser lain dan jangan pernah mencoba mengunakan wallet lain cukup dengan wallet sebelumnya lakukan import pharse dan ulangi otorisasi wallet.
 
 
 #####  Check the validator_key.json
