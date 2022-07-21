@@ -141,12 +141,15 @@ cd ~/nearcore
 Node sedang berjalan, Anda dapat melihat output log di konsol Anda. Node Anda harus menemukan rekan, mengunduh HEADERS hingga 100%, dan kemudian mengunduh blok.
 ----
 LIHAT HEADERS DOWNLOAD
+
 <img width="358" alt="Jepretan Layar 2022-07-21 pukul 16 55 31" src="https://user-images.githubusercontent.com/55140596/180241246-3a143ec2-59c1-40db-b3d1-3863ed606172.png">
 
 LOG JIKA HEADER SUDAH TERINSTAL DAN MELANJUTKAN DOWNLOAD BLOCK
+
 ![0476ec55-b827-4365-8258-05d97edb3d98](https://user-images.githubusercontent.com/55140596/180241813-af36e65d-a06b-4871-8035-5d2ad85419ba.jpeg)
 
 LOG DOWNLOAD BLOCK SELESAI 100%
+
 <img width="618" alt="Jepretan Layar 2022-07-21 pukul 16 55 12" src="https://user-images.githubusercontent.com/55140596/180242032-2d4e8a47-d95b-4da4-b4c8-62b9aa949697.png">
 
 SETELAH SEMUANYA SIAP KELUAR DARI LOG
@@ -175,26 +178,28 @@ near login
 
 ![3](https://user-images.githubusercontent.com/55140596/180243146-f67ae837-4b06-4917-ab6d-c6d4e4ae5aad.png)
 
-3 – After Grant, you will see a page like this, go back to console
+3 – paste nama wallet ke console dan enter kamu akan melihat sukses menautkan wallet dengan console anda
+
+![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
+
+4 – Setelah Grant, kamu akan melihat halaman browser error, kembali ke console
 
 ![4](https://user-images.githubusercontent.com/55140596/180243152-396aaa63-f166-4984-a0d1-94dc56173db5.png)
 
-4 – Enter your wallet and press Enter
 
-![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
 
 catatan :
 jika terjadi error saat login wallet ulangi dari awal dan lakukan otorisasi wallet dengan browser lain dan jangan pernah mencoba mengunakan wallet lain cukup dengan wallet sebelumnya lakukan import pharse dan ulangi otorisasi wallet.
 
 
 #####  Check the validator_key.json
-* Run the following command:
+* Jalankan perintah berikut:
 ```
 cat ~/.near/validator_key.json
 ```
 
 
-> Note: If a validator_key.json is not present, follow these steps to create one
+> Catatan: Jika validator_key.json tidak ada, ikuti langkah-langkah ini untuk membuatnya
 
 Create a `validator_key.json` 
 
@@ -203,19 +208,30 @@ Create a `validator_key.json`
 ```
 near generate-key <pool_id>
 ```
-<pool_id> ---> xx.factory.shardnet.near WHERE xx is you pool name
+<pool_id> ---> xx.factory.shardnet.near dimana xx nama wallet kamu
 
-* Copy the file generated to shardnet folder:
-Make sure to replace <pool_id> by your accountId
+* Copy the file generated ke shardnet folder:
+
 ```
 cp ~/.near-credentials/shardnet/YOUR_WALLET.json ~/.near/validator_key.json
 ```
-* Edit “account_id” => xx.factory.shardnet.near, where xx is your PoolName
-* Change `private_key` to `secret_key`
+YOUR_WALLET ganti dengan nama wallet kamu
 
-> Note: The account_id must match the staking pool contract name or you will not be able to sign blocks.\
+masuk ke folder validator_key.json
 
-File content must be in the following pattern:
+````
+cd .near
+````
+````
+cd validator_key.json
+````
+
+* Edit “account_id” => xx.factory.shardnet.near, dimana xx nama wallet kamu tadi
+* ganti `private_key` to `secret_key`
+
+>Catatan: ID_akun harus cocok dengan nama kontrak kumpulan taruhan atau Anda tidak akan dapat menandatangani blok.\
+
+Konten file harus dalam pola berikut:
 ```
 {
   "account_id": "xx.factory.shardnet.near",
@@ -224,18 +240,54 @@ File content must be in the following pattern:
 }
 ```
 
-#####  Start the validator node
+#####  Mulai the validator node
+
+kembali ke folder awal
+````
+cd nearcore
+````
 
 ```
 target/release/neard run
 ```
-* Setup Systemd
+Jika tidak terjadi error lanjutkan untuk membuat Systemd
+
+* Siapkan Systemd
 Command:
+Kembali ke folder paling awal
 
 ```
 sudo vi /etc/systemd/system/neard.service
 ```
 Paste:
+
+Jika anda mengunakan vps digital ocean silahkan menggunakan ini.
+
+````
+[Unit]
+Description=NEARd Daemon Service
+
+[Service]
+Type=simple
+User=root
+#Group=near
+WorkingDirectory=/root/.near
+ExecStart=/root/nearcore/target/release/neard run
+Restart=on-failure
+RestartSec=30
+KillSignal=SIGINT
+TimeoutStopSec=45
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+````
+
+dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan path vps yang kalian gunakan
+perhatikan di bagian 
+WorkingDirectory
+dan
+ExecStart
 
 ```
 [Unit]
@@ -257,7 +309,12 @@ KillMode=mixed
 WantedBy=multi-user.target
 ```
 
-> Note: Change USER to your paths
+> Note: Ubah USER dengan paths kamu
+> Cara keluar dari Vim :x lalu enter
+> cara edit Vim tekan S lalu keluar dari edit esc
+> lalu keluar dari Vim
+
+Langkah Selanjutnya aktifkan systemctl
 
 Command:
 
@@ -269,44 +326,72 @@ Command:
 ```
 sudo systemctl start neard
 ```
-If you need to make a change to service because of an error in the file. It has to be reloaded:
+Jika Anda perlu melakukan perubahan pada layanan karena kesalahan dalam file. Itu harus dimuat ulang:
 
 ```
 sudo systemctl reload neard
 ```
-###### Watch logs
+###### Lihat logs
 Command:
 
 ```
 journalctl -n 100 -f -u neard
 ```
-Make log output in pretty print
+
+Jika Terdapat Log
+
+No Journal files were found 
+
+Lakukan Perintah Ini
+````
+sudo nano /etc/systemd/journald.conf
+````
+Ubah Config
+````
+[Journal]
+#Storage=auto
+...
+````
+Menjadi 
+````
+[Journal]
+Storage=persistent
+...
+````
+Dan lakukan Restar 
+````
+sudo systemctl restart systemd-journald
+````
+
+Cek Log Lagi
+
+Buat Log dengan warna
 
 Command:
 
 ```
 sudo apt install ccze
 ```
-View Logs with color
+Melihat Logs Dengan Warna
 
 Command:
 
 ```
 journalctl -n 100 -f -u neard | ccze -A
 ```
-#### Becoming a Validator
-In order to become a validator and enter the validator set, a minimum set of success criteria must be met.
+#### Menjadi Validator
+Untuk menjadi validator dan masuk ke dalam set validator, minimal harus memenuhi kriteria keberhasilan.
 
-* The node must be fully synced
-* The `validator_key.json` must be in place
-* The contract must be initialized with the public_key in `validator_key.json`
-* The account_id must be set to the staking pool contract id
-* There must be enough delegations to meet the minimum seat price. See the seat price [here](https://explorer.shardnet.near.org/nodes/validators).
-* A proposal must be submitted by pinging the contract
-* Once a proposal is accepted a validator must wait 2-3 epoch to enter the validator set
-* Once in the validator set the validator must produce great than 90% of assigned blocks
+* Node harus disinkronkan sepenuhnya
+* `validator_key.json` harus ada di tempatnya
+* Kontrak harus diinisialisasi dengan kunci_publik di `validator_key.json`
+* Account_id harus disetel ke id kontrak staking pool
+* Harus ada delegasi yang cukup untuk memenuhi harga kursi minimum. Lihat harga kursi [di sini](https://explorer.shardnet.near.org/nodes/validators).
+* Proposal harus diajukan dengan melakukan ping ke kontrak
+* Setelah proposal diterima, validator harus menunggu 2-3 epoch untuk masuk ke set validator
+* Setelah di set validator, validator harus menghasilkan lebih dari 90% blok yang ditugaskan
 
-Check running status of validator node. If “Validator” is showing up, your pool is selected in the current validators list.
+Periksa status menjalankan node validator. Jika “Validator” muncul, kumpulan Anda dipilih dalam daftar validator saat ini.
 
 
 ## Let's go to challenge 3 🚀
