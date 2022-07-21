@@ -16,6 +16,8 @@ journalctl -n 100 -f -u neard | grep "INFO stats"
 #### Lanjutkan Deploy a Staking Pool jika anda sudah tidak melihat Downloading blocks
 
 ````
-near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "gateomega", "owner_id": "gateomega.shardnet.near", "stake_public_key": "ed25519:CiGdCnC98pBRq5dj6bw1r4RUpUC2k7NfMWQ6Qef5PQLi", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="gateomega.shardnet.near" --amount=551 --gas=300000000000000
+near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "cenbacen", "owner_id": "cenbacen.shardnet.near", "stake_public_key": "ed25519:CiGre44rssxxxxxxxxxx", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="gateomega.shardnet.near" --amount=551 --gas=300000000000000
 ````
-edit 
+#### *EDIT* cenbacen menjadi nama wallet kalian
+
+#### *EDIT* ed25519:CiGre44rssxxxxxxxxxx dengan public_key kalian yang berada di file validator_key.json
