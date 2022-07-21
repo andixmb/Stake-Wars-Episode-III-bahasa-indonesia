@@ -72,7 +72,7 @@ Command:
 export NEAR_ENV=shardnet
 ```
 
-Anda juga dapat menjalankan perintah ini untuk mengatur Near testnet Environment persisten:
+Selanjutnya jalankan perintah ini untuk mengatur Near testnet Environment persisten:
 ```
 echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
 ```
