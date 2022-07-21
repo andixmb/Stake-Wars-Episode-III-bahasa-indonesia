@@ -41,7 +41,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 You will see the following:
 
-![img](./images/rust.png)
+![rust](https://user-images.githubusercontent.com/55140596/180235181-db2fbc43-a4b7-49f8-ac6c-9fc2eb90af4f.png)
+
 
 Pilih 1 dan tekan enter.
 
@@ -80,30 +81,42 @@ Agar berfungsi dengan baik, node NEAR memerlukan direktori kerja dan beberapa fi
 ./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis
 ```
 
-![img](./images/initialize.png)
+![initialize](https://user-images.githubusercontent.com/55140596/180235376-7f32d0d3-d73a-4130-9601-d907ba42c7e8.png)
 
-This command will create the directory structure and will generate `config.json`, `node_key.json`, and `genesis.json` on the network you have passed. 
+Hanya penjelasan
+Perintah ini akan membuat struktur direktori dan akan menghasilkan `config.json`, `node_key.json`, dan `genesis.json` pada jaringan yang telah Anda lewati.
 
-- `config.json` - Configuration parameters which are responsive for how the node will work. The config.json contains needed information for a node to run on the network, how to communicate with peers, and how to reach consensus. Although some options are configurable. In general validators have opted to use the default config.json provided.
+- `config.json` - Parameter konfigurasi yang responsif terhadap cara kerja node. config.json berisi informasi yang diperlukan agar node dapat berjalan di jaringan, cara berkomunikasi dengan peer, dan cara mencapai konsensus. Meskipun beberapa opsi dapat dikonfigurasi. Secara umum validator telah memilih untuk menggunakan config.json default yang disediakan.
 
-- `genesis.json` - A file with all the data the network started with at genesis. This contains initial accounts, contracts, access keys, and other records which represents the initial state of the blockchain. The genesis.json file is a snapshot of the network state at a point in time. In contacts accounts, balances, active validators, and other information about the network. 
+- `genesis.json` - File dengan semua data yang dimulai jaringan di genesis. Ini berisi akun awal, kontrak, kunci akses, dan catatan lain yang mewakili keadaan awal blockchain. File genesis.json adalah snapshot dari status jaringan pada suatu titik waktu. Di akun kontak, saldo, validator aktif, dan informasi lain tentang jaringan.
 
-- `node_key.json` -  A file which contains a public and private key for the node. Also includes an optional `account_id` parameter which is required to run a validator node (not covered in this doc).
+- `node_key.json` - File yang berisi kunci publik dan pribadi untuk node. Juga menyertakan parameter `account_id` opsional yang diperlukan untuk menjalankan node validator (tidak tercakup dalam dokumen ini).
 
-- `data/` -  A folder in which a NEAR node will write it's state.
+- `data/` - Folder tempat node NEAR akan menulis statusnya.
 
 #### Replace the `config.json`
-
-From the generated `config.json`, there two parameters to modify:
-- `boot_nodes`: If you had not specify the boot nodes to use during init in Step 3, the generated `config.json` shows an empty array, so we will need to replace it with a full one specifying the boot nodes.
-- `tracked_shards`: In the generated `config.json`, this field is an empty. You will have to replace it to `"tracked_shards": [0]`
+kembali ke folder awal
+````
+cd ..
+````
+next step
 
 ```
 rm ~/.near/config.json
 wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
 ```
+#### Check status 
+pada isi config.json 
+jika isi kosong `"tracked_shards": []` ( tambahkan angka 0)
+dan dibagian archive": false, jika masih true edit menjadi false
+edit mengunakan nano
+isi config berada di 
+cd .near
+nano config.json
+cari `"tracked_shards" dan archive":
+edit dan save 
+ctrl + x lalu y lalu enter
 
-#### Get latest snapshot
 
 **IMPORTANT: NOT REQUIRED TO GET SNAPSHOT AFTER HARDFORK ON SHARDNET DURING 2022-07-18**
 
