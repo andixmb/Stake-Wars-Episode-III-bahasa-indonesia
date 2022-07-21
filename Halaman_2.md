@@ -61,11 +61,7 @@ git fetch
 ```
 
 #### Compile `nearcore` binary
-Masuk ke folder nearcore 
 
-````
-cd nearcore
-````
 Di folder `nearcore` jalankan perintah berikut:
 
 ```
