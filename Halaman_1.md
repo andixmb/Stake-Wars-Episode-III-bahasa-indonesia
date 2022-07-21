@@ -110,4 +110,4 @@ near validators next
 
 ## Langkah Selanjutnya
 
-[Setup and Run your Node](./002.md)
+[Setup and Run your Node](./Halaman_2.md)
