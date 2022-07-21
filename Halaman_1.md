@@ -11,26 +11,29 @@ Silakan lihat persyaratan perangkat keras di bawah ini:
 | Storage        | 500GB SSD                                                             |
 
 
-#### Setup NEAR-CLI
+#### Menyiapkan NEAR-CLI
 
-NEAR-CLI is a command-line interface that communicates with the NEAR blockchain via remote procedure calls (RPC):
+NEAR-CLI adalah antarmuka baris perintah yang berkomunikasi dengan blockchain NEAR melalui panggilan prosedur jarak jauh (RPC):
 
-* Setup and Installation NEAR CLI
-* View Validator Stats
+* Setup dan Instalasi NEAR CLI
+* Lihat Statistik Validator
 
-> Note: For security reasons, it is recommended that NEAR-CLI be installed on a different computer than your validator node and that no full access keys be kept on your validator node.
-First, let's make sure the linux machine is up-to-date.
+Pertama, mari kita pastikan mesin linux up-to-date.
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
 ##### Install developer tools, Node.js, and npm
-First, we will start with installing `Node.js` and `npm`:
+Pertama, kita akan mulai dengan menginstal `Node.js` dan `npm`:
 ```
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -  
+````
+````
 sudo apt install build-essential nodejs
+````
+````
 PATH="$PATH"
-```
+````
 
 Check `Node.js` and `npm` version:
 ```
