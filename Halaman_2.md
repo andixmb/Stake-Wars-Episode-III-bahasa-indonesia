@@ -117,28 +117,19 @@ cari `"tracked_shards" dan archive":
 edit dan save 
 ctrl + x lalu y lalu enter
 
-
-**IMPORTANT: NOT REQUIRED TO GET SNAPSHOT AFTER HARDFORK ON SHARDNET DURING 2022-07-18**
-
 Install AWS Cli
 ```
 sudo apt-get install awscli -y
 ```
-
-Download snapshot (genesis.json)
-```
-// IMPORTANT: NOT REQUIRED TO GET SNAPSHOT AFTER HARDFORK ON SHARDNET DURING 2022-07-18
-cd ~/.near
-wget https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json
-```
-
-If the above fails, AWS CLI may be oudated in your distribution repository. Instead, try:
+Jika hal di atas gagal, AWS CLI mungkin mengalami oudated di repositori distribusi Anda. Sebagai gantinya, coba:
 ```
 pip3 install awscli --upgrade
 ```
 
 #### Run the node
-To start your node simply run the following command:
+Untuk memulai node Anda cukup jalankan perintah berikut:
+
+jalankan di folder nearcore
 
 ```
 cd ~/nearcore
