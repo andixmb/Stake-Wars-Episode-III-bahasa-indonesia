@@ -370,7 +370,7 @@ Dan lakukan Restar
 sudo systemctl restart systemd-journald
 ````
 
-Cek Log Lagi
+Cek Log Lagi Jika Masih Error Coba Restar Lagi Dan Check Log Lagi
 
 Buat Log dengan warna
 
