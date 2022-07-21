@@ -70,11 +70,11 @@ Di folder `nearcore` jalankan perintah berikut:
 ```
 cargo build -p neard --release --features shardnet
 ```
-The binary path is `target/release/neard`. If you are seeing issues, it is possible that cargo command is not found. Compiling `nearcore` binary may take a little while.
+Jalur biner adalah `target/release/neard`. Jika Anda melihat masalah, mungkin perintah kargo tidak ditemukan. Kompilasi biner `nearcore` mungkin memakan waktu agak lama.
 
 #### Initialize working directory
 
-In order to work properly, the NEAR node requires a working directory and a couple of configuration files. Generate the initial required working directory by running:
+Agar berfungsi dengan baik, node NEAR memerlukan direktori kerja dan beberapa file konfigurasi. Hasilkan direktori kerja awal yang diperlukan dengan menjalankan:
 
 ```
 ./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis
