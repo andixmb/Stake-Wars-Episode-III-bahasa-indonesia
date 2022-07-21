@@ -1,13 +1,15 @@
 # Stake Wars: Episode III. Challenge 002
 
 ##### Prerequisites:
-Before you start, you may want to confirm that your machine has the right CPU features. 
+Sebelum memulai, Anda mungkin ingin memastikan bahwa mesin Anda memiliki fitur CPU yang tepat.
 
 ```
 lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
   && echo "Supported" \
   || echo "Not supported"
 ```
+Hasil
+
 > Supported
 
 
@@ -41,7 +43,7 @@ You will see the following:
 
 ![img](./images/rust.png)
 
-Press 1 and press enter.
+Pilih 1 dan tekan enter.
 
 ##### Source the environment
 ```
@@ -49,7 +51,7 @@ source $HOME/.cargo/env
 ```
 
 #### Clone `nearcore` project from GitHub
-First, clone the [`nearcore` repository](https://github.com/near/nearcore).
+Pertama, clone the [`nearcore` repository](https://github.com/near/nearcore).
 
 ```
 git clone https://github.com/near/nearcore
@@ -57,13 +59,13 @@ cd nearcore
 git fetch
 ```
 
-Checkout to the commit needed. Please refer to the commit defined in [this file](https://github.com/near/stakewars-iii/blob/main/commit.md). 
-```
-git checkout <commit>
-```
-
 #### Compile `nearcore` binary
-In the `nearcore` folder run the following commands:
+Masuk ke folder nearcore 
+
+````
+cd nearcore
+````
+Di folder `nearcore` jalankan perintah berikut:
 
 ```
 cargo build -p neard --release --features shardnet
