@@ -2,7 +2,7 @@
 
 Tutorial dan sharing
 
-Hello Everyone i
+Hello Everyone 
 
 Welcome to Stake Wars: Episode III A New Validator
 
