@@ -1,5 +1,7 @@
 # Stake Wars: Episode III. Challenge 002
 
+## Tantangan ini difokuskan pada penerapan node (nearcore), mengunduh snapshot, menyinkronkannya ke keadaan jaringan yang sebenarnya, kemudian mengaktifkan node sebagai validator.
+
 ##### Prerequisites:
 Sebelum memulai, Anda mungkin ingin memastikan bahwa mesin Anda memiliki fitur CPU yang tepat.
 
