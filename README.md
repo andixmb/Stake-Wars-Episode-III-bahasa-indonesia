@@ -9,7 +9,7 @@ Stake Wars adalah program yang membantu komunitas menjadi terbiasa dengan apa ar
 
 Stake Wars menawarkan hadiah yang mendukung anggota baru yang ingin bergabung dengan mainnet sebagai validator mulai akhir September 2022.
 
-##  official link 
+##  Official link 
 
 Hope the force will be with you ! https://github.com/near/stakewars-iii/blob/main/challenges/001.md
 
@@ -19,7 +19,7 @@ Discord : https://discord.gg/5yFu3aut
 
 Buat dompet Shardnet
 
-##  Tautan yang berguna
+##  wallet dan explorer
 
 Dompet: https://wallet.shardnet.near.org/
 
