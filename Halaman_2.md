@@ -15,7 +15,7 @@ Hasil
 
 ##### Install developer tools:
 ```
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python2-minimal docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
 ```
 #####  Install Python pip:
 
@@ -102,15 +102,26 @@ rm ~/.near/config.json
 wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
 ```
 #### Check status 
-pada isi config.json 
-jika isi kosong `"tracked_shards": []` ( tambahkan angka 0)
+pada folder config.json 
+
+jika isi file `"tracked_shards": []` ( tambahkan angka 0) `"tracked_shards": [0]`
+
 dan dibagian archive": false, jika masih true edit menjadi false
+
 edit mengunakan nano
-isi config berada di 
+
+file config.json berada di folder .near
+
+````
 cd .near
+````
+
 nano config.json
+
 cari `"tracked_shards" dan archive":
+
 edit dan save 
+
 ctrl + x lalu y lalu enter
 
 Install AWS Cli
