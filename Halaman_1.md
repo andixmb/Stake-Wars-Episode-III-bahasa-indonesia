@@ -55,32 +55,34 @@ sudo npm install -g near-cli
 ```
 ### Validator Stats
 
-Now that NEAR-CLI is installed, let's test out the CLI and use the following commands to interact with the blockchain as well as to view validator stats. There are three reports used to monitor validator status:
+Sekarang setelah NEAR-CLI terinstal, mari kita uji CLI dan gunakan perintah berikut untuk berinteraksi dengan blockchain serta untuk melihat statistik validator. Ada tiga laporan yang digunakan untuk memantau status validator:
 
 
 ###### Environment
-The environment will need to be set each time a new shell is launched to select the correct network.
+Network perlu diatur setiap kali shell baru diluncurkan untuk memilih jaringan yang benar.
 
 Networks:
 - GuildNet
 - TestNet
 - MainNet
-- **Shardnet** (this is the network we will use for Stake Wars)
+- **Shardnet** (ini adalah jaringan yang akan kami gunakan untuk Stake Wars)
 
 Command:
 ```
 export NEAR_ENV=shardnet
 ```
 
-You can also run this command to set the Near testnet Environment persistent:
+Anda juga dapat menjalankan perintah ini untuk mengatur Near testnet Environment persisten:
 ```
 echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
 ```
 
 #### NEAR CLI Commands Guide:
 
+## Bisa anda lewati dan melanjutkan ke step berikutnya
+
 ###### Proposals
-A proposal by a validator indicates they would like to enter the validator set, in order for a proposal to be accepted it must meet the minimum seat price.
+Proposal oleh validator menunjukkan bahwa mereka ingin masuk ke set validator, agar proposal dapat diterima harus memenuhi harga kursi minimum.
 
 Command:
 ```
@@ -88,7 +90,7 @@ near proposals
 ```
 
 ###### Validators Current
-This shows a list of active validators in the current epoch, the number of blocks produced, number of blocks expected, and online rate. Used to monitor if a validator is having issues.
+Ini menunjukkan daftar validator aktif di periode saat ini, jumlah blok yang dihasilkan, jumlah blok yang diharapkan, dan tarif online. Digunakan untuk memantau jika validator mengalami masalah.
 
 Command:
 ```
@@ -96,7 +98,7 @@ near validators current
 ```
 
 ###### Validators Next
-This shows validators whose proposal was accepted one epoch ago, and that will enter the validator set in the next epoch.
+Ini menunjukkan validator yang proposalnya diterima satu epoch yang lalu, dan yang akan masuk ke set validator di epoch berikutnya.
 
 Command:
 ```
@@ -106,6 +108,6 @@ near validators next
 ---
 
 
-## We continue ?
+## Langkah Selanjutnya
 
 [Setup and Run your Node](./002.md)
