@@ -34,8 +34,10 @@ sudo apt install build-essential nodejs
 ````
 PATH="$PATH"
 ````
+Jika error saat penginstalan nodejs ulangi dari awal dan pilih Y ( Y besar)
+Lalu next PATH
 
-Check `Node.js` and `npm` version:
+Check Versi `Node.js` and `npm` version:
 ```
 node -v
 ```
@@ -46,7 +48,7 @@ npm -v
 > 8.x.x
 
 ##### Install NEAR-CLI
-Here's the Github Repository for NEAR CLI.: https://github.com/near/near-cli. To install NEAR-CLI, unless you are logged in as root, which is not recommended you will need to use `sudo` to install NEAR-CLI so that the near binary is saved to /usr/local/bin
+Inilah Repositori Github untuk NEAR CLI.: https://github.com/near/near-cli. Untuk menginstal NEAR-CLI, ( kecuali Anda login sebagai root, tidak disarankan menggunakan `sudo` untuk menginstal NEAR-CLI sehingga biner dekat disimpan ke /usr/local/bin
 
 ```
 sudo npm install -g near-cli
