@@ -157,7 +157,7 @@ Node sedang berjalan, Anda dapat melihat output log di konsol Anda. Node Anda ha
 
 ![0476ec55-b827-4365-8258-05d97edb3d98](https://user-images.githubusercontent.com/55140596/180241813-af36e65d-a06b-4871-8035-5d2ad85419ba.jpeg)
 
-LOG DOWNLOAD BLOCK SELESAI 100%
+* **LOG DOWNLOAD BLOCK SELESAI 100%**
 
 <img width="618" alt="Jepretan Layar 2022-07-21 pukul 16 55 12" src="https://user-images.githubusercontent.com/55140596/180242032-2d4e8a47-d95b-4da4-b4c8-62b9aa949697.png">
 
