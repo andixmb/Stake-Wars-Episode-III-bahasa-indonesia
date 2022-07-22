@@ -128,7 +128,7 @@ mkdir /root/logs
 nano all.log
 ````
 
-## Next challenge lets fucking gooo baby
+## Next challenge lets gooo
 
 [Check your Node.](./Halaman_4.md).
 
