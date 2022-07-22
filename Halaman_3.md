@@ -22,6 +22,8 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "cenbac
 
 #### *EDIT* ed25519:CiGre44rssxxxxxxxxxx dengan public_key kalian yang berada di file validator_key.json
 
+* **Catatan amount:30 adalah minimum penyimapanan yang diperlukan jangan merubahnya lebih sedikit
+
 Anda akan melihat LOG  "True" di Akhir LOG Create Pool yang Anda buat.
 
 ## Penjelasan Singkat Mengenai Contoh Diatas:
@@ -43,26 +45,66 @@ Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.
 
 * **Ganti id pool/nama wallet Anda (cenbacen), id akun (cenbacen.shardnet.near) dengan ID Anda sendiri/nama wallet.**
 
-* **Ganti amount dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
+* **Ganti amount xx dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
 
-## Ping
+* **Jadi misal set price 200 Near ubah menjadi amount menjadi 200 atau lebih agar validator dapat bergabung dengan saat epoch dan block sudah berganti 
 
-Ping mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini.
+## selanjutnya lakukan ping awal
 
-near call <staking_pool_id> ping '{}' --accountId <accountId> --gas=300000000000000
+````
+near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet.near --gas=300000000000000
+````
+* **Ganti cenbacen dengan nama wallet kamu
 
-  Auto-Ping Script
-  
-  Anda harus melakukan ping ke server setiap 5 menit untuk mengaktualisasikan hadiah Anda dan menjaga node Anda tetap aktif jika ditendang keluar.
-  
-  Buat corn job
-  ````
-  apt-get install cron
-  ````
-  near_ping.sh
-  ````
-  cat near_ping.sh
-  ````
+## Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini.
+
+## pasang Script Auto Ping
+## Script Auto Ping
+
+
+touch ping.sh
+nano ping.sh
+
+export LOGS=/root/logs
+export POOLID=sayangku
+export ACCOUNTID=sayangku
+root@localhost:~# echo "---" >> $LOGS/all.log
+date >> $LOGS/all.log
+near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
+
+ubah cenbacen menjadi nama wallet kamu 
+
+chmod 755 ping.sh
+
+install cron 
+
+apt-get install cron
+
+edit variabel
+
+crontab -e
+
+saya mengunakan vps digital ocean ikuti saja sesuai perintah
+
+paste ini 
+
+NEAR_ENV=shardnet
+*/5 * * * * sh /root/ping.sh
+
+done
+
+note jika anda mengunakan vps lain coba sesuaikan dengan nama direktori anda
+
+example:
+
+*/5 * * * * sh /home/<USER_ID>/ping.sh
+
+mkdir /root/logs 
+mkdir /logs 
+
+
+
+cd logs  nano all.log
   
 
 
