@@ -41,7 +41,7 @@ Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.
 
 ## Deposit and Stake NEAR
 ````
-near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --accountId cenbacen.shardnet.near --gas=300000000000000**
+near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --accountId cenbacen.shardnet.near --gas=300000000000000
 ````
 * **Ganti id pool/nama wallet Anda (cenbacen), id akun (cenbacen.shardnet.near) dengan ID Anda sendiri/nama wallet.**
 
