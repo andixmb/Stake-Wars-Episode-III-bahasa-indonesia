@@ -22,7 +22,7 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "cenbac
 
 #### *EDIT* ed25519:CiGre44rssxxxxxxxxxx dengan public_key kalian yang berada di file validator_key.json
 
-* **Catatan amount:30 adalah minimum penyimapanan yang diperlukan jangan merubahnya lebih sedikit
+* **Catatan amount:30 adalah minimum penyimapanan yang diperlukan jangan merubahnya lebih sedikit**
 
 Anda akan melihat LOG  "True" di Akhir LOG Create Pool yang Anda buat.
 
@@ -54,57 +54,80 @@ Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.
 ````
 near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet.near --gas=300000000000000
 ````
-* **Ganti cenbacen dengan nama wallet kamu
+* **Ganti cenbacen dengan nama wallet kamu**
 
 ## Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini.
 
 ## pasang Script Auto Ping
 ## Script Auto Ping
 
+* **Jalankan Script dibawah ini**
 
+````
 touch ping.sh
+````
+
+* **Ubah File Menggunakan Nano**
+
+````
 nano ping.sh
+````
+
+* **Masukkan Data ini**
 
 export LOGS=/root/logs
-export POOLID=sayangku
-export ACCOUNTID=sayangku
+export POOLID=cenbacen
+export ACCOUNTID=cenbacen
 root@localhost:~# echo "---" >> $LOGS/all.log
 date >> $LOGS/all.log
 near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
 
-ubah cenbacen menjadi nama wallet kamu 
+* **ubah cenbacen menjadi nama wallet kamu**
 
+* **Lanjut Jalankan Ini**
+
+````
 chmod 755 ping.sh
+````
 
-install cron 
-
+* **Install Cron Job**
+````
 apt-get install cron
+````
 
-edit variabel
-
+* **edit variabel**
+````
 crontab -e
+````
+* **saya mengunakan vps digital ocean ikuti saja sesuai perintah**
 
-saya mengunakan vps digital ocean ikuti saja sesuai perintah
-
-paste ini 
-
+* **paste ini ke paling bawah**
+````
 NEAR_ENV=shardnet
 */5 * * * * sh /root/ping.sh
+````
 
-done
+* **Done**
 
-note jika anda mengunakan vps lain coba sesuaikan dengan nama direktori anda
+* **Note jika anda mengunakan vps lain coba sesuaikan dengan nama direktori anda**
 
-example:
+* **example:**
 
 */5 * * * * sh /home/<USER_ID>/ping.sh
 
+* **Buat Folder Log untuk melihat riwayat transaksi**
+
+* **Kembali ke Folder Awal**
+````
 mkdir /root/logs 
-mkdir /logs 
+````
+* **Lihat Log**
 
-
-
-cd logs  nano all.log
+* **Masuk ke folder Log**
+````
+nano all.log
+```
+## Next challenge lets fucking gooo baby
   
 
 
