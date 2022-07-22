@@ -3,9 +3,9 @@
 ![near](https://user-images.githubusercontent.com/55140596/180490035-30649ad1-e6fe-461e-8005-16f5bb25803f.png)
 
 
-Form for Stakewars submissions - Will update when new challenge :) https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform
+### Form for Stakewars submissions - Will update when new challenge :) https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform
 
-List Challenge 
+### List Challenge 
 https://github.com/near/stakewars-iii/blob/main/challenges/challenge-summary.md
 
 
