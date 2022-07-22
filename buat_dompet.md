@@ -1,4 +1,4 @@
-# Pertama buat dompet 
+# Buat dompet 
 
 Wallet:
 >- [Wallet](https://wallet.shardnet.near.org/)
@@ -23,4 +23,4 @@ Wallet:
 ## Dompet sudah dibuat bersiaplah untuk mulai
 <img width="942" alt="Jepretan Layar 2022-07-21 pukul 20 03 26" src="https://user-images.githubusercontent.com/55140596/180222858-225ce79a-564b-4a26-9086-420e26564e10.png">
 
-[NEXT](./Halaman_1.md)
+[Mari Membuat Node Validator](./Halaman_1.md)
