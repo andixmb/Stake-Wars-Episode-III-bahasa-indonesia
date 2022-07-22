@@ -24,7 +24,7 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "cenbac
 
 Anda akan melihat LOG  "True" di Akhir LOG Create Pool yang Anda buat.
 
-Penjelasan Singkat Mengenai Contoh Diatas:
+## Penjelasan Singkat Mengenai Contoh Diatas:
 
 * **Pool ID**: Staking pool name, progam secara otomatis menambahkan namanya ke parameter ini, membuat {pool_id}.{staking_pool_factory} Contoh: cenbacen.factory.shardnet.near
 
@@ -37,13 +37,15 @@ Di dalam direktory .near-credentials/shardnet#
 
 Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.near.org/nodes/validators
 
-Deposit and Stake NEAR
+## Deposit and Stake NEAR
 
-near call cenbacen.factory.shardnet.near deposit_and_stake --amount 1965 --accountId cenbacen.shardnet.near --gas=300000000000000
+* **near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --accountId cenbacen.shardnet.near --gas=300000000000000**
 
-Ganti id pool/nama wallet Anda (cenbacen), id akun (cenbacen.shardnet.near) dengan ID Anda sendiri/nama wallet.
+* **Ganti id pool/nama wallet Anda (cenbacen), id akun (cenbacen.shardnet.near) dengan ID Anda sendiri/nama wallet.**
 
-ping
+* **Ganti amount dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
+
+## Ping
 
 Ping mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini.
 
