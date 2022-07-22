@@ -141,7 +141,7 @@ Untuk memulai node Anda cukup jalankan perintah berikut:
 jalankan di folder nearcore
 
 ```
-cd ~/nearcore
+cd nearcore
 ./target/release/neard --home ~/.near run
 ```
 
