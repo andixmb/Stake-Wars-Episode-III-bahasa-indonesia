@@ -292,7 +292,7 @@ KillMode=mixed
 WantedBy=multi-user.target
 ````
 
-dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan path vps yang kalian gunakan
+dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan direktori vps yang kalian gunakan
 perhatikan di bagian 
 WorkingDirectory
 dan
