@@ -232,7 +232,7 @@ masuk ke folder validator_key.json
 cd .near
 ````
 ````
-cd validator_key.json
+nano validator_key.json
 ````
 
 * Edit “account_id” => xx.factory.shardnet.near, dimana xx nama wallet kamu tadi
