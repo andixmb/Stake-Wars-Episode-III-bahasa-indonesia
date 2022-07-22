@@ -40,9 +40,9 @@ Di dalam direktory .near-credentials/shardnet#
 Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.near.org/nodes/validators
 
 ## Deposit and Stake NEAR
-
-* **near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --accountId cenbacen.shardnet.near --gas=300000000000000**
-
+````
+near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --accountId cenbacen.shardnet.near --gas=300000000000000**
+````
 * **Ganti id pool/nama wallet Anda (cenbacen), id akun (cenbacen.shardnet.near) dengan ID Anda sendiri/nama wallet.**
 
 * **Ganti amount xx dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
