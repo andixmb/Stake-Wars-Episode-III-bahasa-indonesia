@@ -1,5 +1,11 @@
 # Stake Wars: Episode III. Challenge 001
 
+Form for Stakewars submissions - Will update when new challenge :) https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform
+
+List Challenge 
+https://github.com/near/stakewars-iii/blob/main/challenges/challenge-summary.md
+
+
 ### Siapkan simpul Anda
 #### Persyaratan Minimum Server
 Silakan lihat persyaratan perangkat keras di bawah ini:
