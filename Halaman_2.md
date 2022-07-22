@@ -41,7 +41,7 @@ sudo apt install clang build-essential make
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-You will see the following:
+Anda akan melihat yang berikut ini:
 
 ![rust](https://user-images.githubusercontent.com/55140596/180235181-db2fbc43-a4b7-49f8-ac6c-9fc2eb90af4f.png)
 
@@ -93,7 +93,7 @@ Perintah ini akan membuat struktur direktori dan akan menghasilkan `config.json`
 - `data/` - Folder tempat node NEAR akan menulis statusnya.
 
 #### Replace the `config.json`
-kembali ke folder awal
+Kembali ke folder awal
 ````
 cd ..
 ````
@@ -104,25 +104,25 @@ rm ~/.near/config.json
 wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
 ```
 #### Check status 
-pada folder config.json 
+Pada folder config.json 
 
-jika isi file `"tracked_shards": []` ( tambahkan angka 0) `"tracked_shards": [0]`
+Jika isi file `"tracked_shards": []` ( tambahkan angka 0) `"tracked_shards": [0]`
 
-dan dibagian archive": false, jika masih true edit menjadi false
+Dan dibagian archive": false, jika masih true edit menjadi false
 
-edit mengunakan nano
+Edit mengunakan nano
 
-file config.json berada di folder .near
+File config.json berada di folder .near
 
 ````
 cd .near
 ````
-
+````
 nano config.json
+````
+Cari `"tracked_shards" dan archive":
 
-cari `"tracked_shards" dan archive":
-
-edit dan save 
+Edit dan save 
 
 ctrl + x lalu y lalu enter
 
@@ -138,7 +138,7 @@ pip3 install awscli --upgrade
 #### Run the node
 Untuk memulai node Anda cukup jalankan perintah berikut:
 
-jalankan di folder nearcore
+Jalankan di folder nearcore
 
 ```
 cd nearcore
@@ -187,7 +187,7 @@ near login
 
 ![3](https://user-images.githubusercontent.com/55140596/180243146-f67ae837-4b06-4917-ab6d-c6d4e4ae5aad.png)
 
-3 – paste nama wallet ke console dan enter kamu akan melihat sukses menautkan wallet dengan console anda
+3 – Paste nama wallet ke console dan enter kamu akan melihat sukses menautkan wallet dengan console anda
 
 ![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
 
@@ -198,7 +198,7 @@ near login
 
 
 catatan :
-jika terjadi error saat login wallet ulangi dari awal dan lakukan otorisasi wallet dengan browser lain dan jangan pernah mencoba mengunakan wallet lain cukup dengan wallet sebelumnya lakukan import pharse dan ulangi otorisasi wallet.
+Jika terjadi error saat login wallet ulangi dari awal dan lakukan otorisasi wallet dengan browser lain dan jangan pernah mencoba mengunakan wallet lain cukup dengan wallet sebelumnya lakukan import pharse dan ulangi otorisasi wallet.
 
 
 #####  Check the validator_key.json
@@ -226,7 +226,7 @@ cp ~/.near-credentials/shardnet/YOUR_WALLET.json ~/.near/validator_key.json
 ```
 YOUR_WALLET ganti dengan nama wallet kamu
 
-masuk ke folder validator_key.json
+Masuk ke folder validator_key.json
 
 ````
 cd .near
@@ -236,7 +236,7 @@ nano validator_key.json
 ````
 
 * Edit “account_id” => xx.factory.shardnet.near, dimana xx nama wallet kamu tadi
-* ganti `private_key` to `secret_key`
+* Ganti `private_key` to `secret_key`
 
 >Catatan: ID_akun harus cocok dengan nama kontrak kumpulan taruhan atau Anda tidak akan dapat menandatangani blok.\
 
@@ -251,7 +251,7 @@ Konten file harus dalam pola berikut:
 
 #####  Mulai the validator node
 
-kembali ke folder awal
+Kembali ke folder awal
 ````
 cd nearcore
 ````
@@ -292,8 +292,10 @@ KillMode=mixed
 WantedBy=multi-user.target
 ````
 
-dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan direktori vps yang kalian gunakan
-perhatikan di bagian 
+Dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan direktori vps yang kalian gunakan
+
+Perhatikan di bagian 
+
 WorkingDirectory
 dan
 ExecStart
@@ -367,7 +369,7 @@ Menjadi
 Storage=persistent
 ...
 ````
-Dan lakukan Restar 
+Dan lakukan Restart 
 ````
 sudo systemctl restart systemd-journald
 ````
