@@ -47,7 +47,7 @@ near call cenbacen.factory.shardnet.near deposit_and_stake --amount xx --account
 
 * **Ganti amount xx dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
 
-* **Jadi misal set price 200 Near ubah menjadi amount menjadi 200 atau lebih agar validator dapat bergabung dengan saat epoch dan block sudah berganti**
+* **Jadi misal set price 200 Near ubah menjadi amount menjadi 200 atau lebih agar validator dapat bergabung. saat epoch dan block sudah berganti**
 
 ## selanjutnya lakukan ping awal
 
@@ -82,7 +82,7 @@ root@localhost:~# echo "---" >> $LOGS/all.log
 date >> $LOGS/all.log
 near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
 ````
-* **ubah cenbacen menjadi nama wallet kamu**
+* **Ubah cenbacen menjadi nama wallet kamu**
 
 * **Lanjut Jalankan Ini**
 
@@ -95,21 +95,21 @@ chmod 755 ping.sh
 apt-get install cron
 ````
 
-* **edit variabel**
+* **Edit variabel**
 ````
 crontab -e
 ````
-* **saya mengunakan vps digital ocean ikuti saja sesuai perintah**
+## Saya mengunakan vps digital ocean ikuti saja sesuai perintah**
 
-* **paste ini ke paling bawah**
+* **Paste ini ke paling bawah**
 ````
 NEAR_ENV=shardnet
 */5 * * * * sh /root/ping.sh
 ````
 
-* **Done**
+## Done
 
-* **Note jika anda mengunakan vps lain coba sesuaikan dengan nama direktori anda**
+* **Note jika anda mengunakan vps lain coba sesuaikan dengan urutan direktori anda**
 
 * **example:**
 ````
