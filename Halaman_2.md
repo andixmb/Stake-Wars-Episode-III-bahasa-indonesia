@@ -349,7 +349,7 @@ journalctl -n 100 -f -u neard
 
 Jika Terdapat Log
 
-No Journal files were found 
+* **No Journal files were found**
 
 Lakukan Perintah Ini
 ````
