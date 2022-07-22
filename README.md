@@ -24,6 +24,6 @@ Dompet: https://wallet.shardnet.near.org/
 
 Penjelajah: https://explorer.shardnet.near.org/
 
-## Selanjutnya
+## Selanjutnya Pertama-tama Buat Dompet 
 
 [Buat Dompet Disini](./buat_dompet.md)
