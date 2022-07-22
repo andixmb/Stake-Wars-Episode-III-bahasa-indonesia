@@ -47,7 +47,7 @@ Periksa pool Anda sekarang yang akan terlihat di sini https://explorer.shardnet.
 
 * **Ganti amount xx dengan seat price yang bisa anda lihat disini harga seat price https://explorer.shardnet.near.org/nodes/validators**
 
-* **Jadi misal set price 200 Near ubah menjadi amount menjadi 200 atau lebih agar validator dapat bergabung dengan saat epoch dan block sudah berganti 
+* **Jadi misal set price 200 Near ubah menjadi amount menjadi 200 atau lebih agar validator dapat bergabung dengan saat epoch dan block sudah berganti**
 
 ## selanjutnya lakukan ping awal
 
@@ -112,9 +112,9 @@ NEAR_ENV=shardnet
 * **Note jika anda mengunakan vps lain coba sesuaikan dengan nama direktori anda**
 
 * **example:**
-
+````
 */5 * * * * sh /home/<USER_ID>/ping.sh
-
+````
 * **Buat Folder Log untuk melihat riwayat transaksi**
 
 * **Kembali ke Folder Awal**
@@ -126,7 +126,8 @@ mkdir /root/logs
 * **Masuk ke folder Log**
 ````
 nano all.log
-```
+````
+
 ## Next challenge lets fucking gooo baby
   
 
