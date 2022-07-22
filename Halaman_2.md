@@ -405,4 +405,4 @@ Periksa status menjalankan node validator. Jika “Validator” muncul, kumpulan
 
 ## Let's go to challenge 3 🚀
 
-[Mount your Staking Pool](.Halaman_3.md).
+[Mount your Staking Pool](./Halaman_3.md).
