@@ -41,7 +41,7 @@ INFO stats: #85079829 H1GUabkB7TW2K2yhZqZ7G47gnpS7ESqicDMNyb9EE6tf Validator 73 
 * **#46199418**: block – blok – Pastikan blok bergerak
 
 #### RPC
-selama port tersebut terbuka di firewall node. NEAR-CLI menggunakan panggilan RPC di belakang layar. Penggunaan umum untuk RPC adalah untuk memeriksa statistik validator, versi node dan untuk melihat saham delegator, meskipun dapat digunakan untuk berinteraksi dengan blockchain, akun, dan kontrak secara keseluruhan.
+Selama port tersebut terbuka di firewall node. NEAR-CLI menggunakan panggilan RPC di belakang layar. Penggunaan umum untuk RPC adalah untuk memeriksa statistik validator, versi node dan untuk melihat saham delegator, meskipun dapat digunakan untuk berinteraksi dengan blockchain, akun, dan kontrak secara keseluruhan.
 
 Temukan banyak perintah dan cara menggunakannya secara lebih rinci di sini:
 
