@@ -19,13 +19,13 @@ Ikuti panduan tantangan Stake Wars III:
 
 ##  Hasil Kerja
 
-1. Artikel melakukan panduan langkah demi langkah tentang cara memasang validator simpul. (GitHub atau Medium)
+Buat Artikel cara melakukan panduan langkah demi langkah tentang cara memasang Node validator. (GitHub atau Medium)
 
 [ Kirim formulir ](https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform) dengan artikel Anda.
 
 ##  Kriteria penerimaan:
 * Dokumentasikan proses dan publikasikan (GitHub atau Medium)
-* Sertakan petunjuk langkah demi langkah untuk memasang validator simpul menggunakan petunjuk Perang Pasak (Tantangan 001, 002, 003, dan 004).
+* Sertakan petunjuk langkah demi langkah untuk memasang Node validator menggunakan petunjuk yang sudah ada (Tantangan 001, 002, 003, dan 004).
 * Sertakan tangkapan layar dan deskripsi terperinci tentang prosesnya.
 * Sertakan harga untuk menjalankan validator.
 * Artikel dapat dibuat dalam bahasa apa pun. Sebuah review dapat dilakukan untuk penerimaan.
