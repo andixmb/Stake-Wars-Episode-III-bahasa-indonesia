@@ -76,15 +76,10 @@ nano ping.sh
 * **Masukkan Data ini**
 ````
 export LOGS=/root/logs
-
 export POOLID=cenbacen
-
 export ACCOUNTID=cenbacen
-
 root@localhost:~# echo "---" >> $LOGS/all.log
-
 date >> $LOGS/all.log
-
 near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
 ````
 * **ubah cenbacen menjadi nama wallet kamu**
