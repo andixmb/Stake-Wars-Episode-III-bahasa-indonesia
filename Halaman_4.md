@@ -91,3 +91,4 @@ near validators next |grep <POOL ID>
 ````
 
 ## Let's go to challenge 5 🚀
+[Run on multiple cloud providers](./Halaman_5.md).
