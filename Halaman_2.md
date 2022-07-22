@@ -253,7 +253,7 @@ Konten file harus dalam pola berikut:
 
 kembali ke folder awal
 ````
-cd ..
+cd nearcore
 ````
 
 ```
