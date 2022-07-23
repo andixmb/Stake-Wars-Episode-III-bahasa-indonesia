@@ -61,7 +61,13 @@ git clone https://github.com/near/nearcore
 cd nearcore
 git fetch
 ```
-
+#### Checkout ke komit yang diperlukan
+````
+git fetch
+````
+````
+git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
+````
 #### Compile `nearcore` binary
 
 Di folder `nearcore` jalankan perintah berikut:
