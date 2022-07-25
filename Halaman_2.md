@@ -273,7 +273,7 @@ Command:
 Kembali ke folder paling awal
 
 ```
-sudo vi /etc/systemd/system/neard.service
+sudo nano /etc/systemd/system/neard.service
 ```
 Paste:
 
