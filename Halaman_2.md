@@ -146,13 +146,12 @@ Untuk memulai node Anda cukup jalankan perintah berikut:
 
 Jalankan di folder nearcore
 
-```
+````
 cd nearcore
 ````
 ````
 ./target/release/neard --home ~/.near run
-```
-
+````
 <img width="1510" alt="download" src="https://user-images.githubusercontent.com/55140596/180240793-807762d1-d863-494f-b7d3-3d7078774f8e.png">
 
 Node sedang berjalan, Anda dapat melihat output log di konsol Anda. Node Anda harus menemukan rekan, mengunduh HEADERS hingga 100%, dan kemudian mengunduh blok.
