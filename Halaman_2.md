@@ -381,6 +381,8 @@ sudo systemctl restart systemd-journald
 
 Cek Log Lagi Jika Masih Error Coba Restar Lagi Dan Check Log Lagi
 
+## Jika log masih error coba restar vps atau matikan hidupkan lagi vps 
+
 Buat Log dengan warna
 
 Command:
