@@ -148,6 +148,8 @@ Jalankan di folder nearcore
 
 ```
 cd nearcore
+````
+````
 ./target/release/neard --home ~/.near run
 ```
 
