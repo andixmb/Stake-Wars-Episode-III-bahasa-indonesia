@@ -7,7 +7,7 @@
 
 [ Kirim formulir ](https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform) 
 
-* **Anda bisa melewati bagian opsinal
+* **Anda bisa melewati bagian opsinal*
 
 
 ### List Challenge 
