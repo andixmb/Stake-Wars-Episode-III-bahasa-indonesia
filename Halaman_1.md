@@ -3,7 +3,12 @@
 ![near](https://user-images.githubusercontent.com/55140596/180490035-30649ad1-e6fe-461e-8005-16f5bb25803f.png)
 
 
-### Isi formulir pendaftaran, jika Anda belum melakukannya (https://nearprotocol1001.typeform.com/to/Z39N7cU9)
+### Isi formulir pendaftaran, Jika Anda belum melakukannya.
+
+[ Kirim formulir ](https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform) 
+
+* **Anda bisa melewati bagian opsinal
+
 
 ### List Challenge 
 https://github.com/near/stakewars-iii/blob/main/challenges/challenge-summary.md
