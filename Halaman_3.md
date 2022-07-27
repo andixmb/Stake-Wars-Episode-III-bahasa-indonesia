@@ -59,6 +59,78 @@ near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet
 ## Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini. untuk menghindari agar anda tidak dikeluarkan dari validator.
 
 ## Pasang Script Auto Ping Ada di Halaman 6 untuk challenge 6
+#### Panduan Transactions
+##### Deposit and Stake NEAR
+
+Command:
+```
+near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <accountId> --gas=300000000000000
+```
+##### Unstake NEAR
+Amount in yoctoNEAR.
+
+Run the following command to unstake:
+```
+near call <staking_pool_id> unstake '{"amount": "<amount yoctoNEAR>"}' --accountId <accountId> --gas=300000000000000
+```
+To unstake all you can run this one:
+```
+near call <staking_pool_id> unstake_all --accountId <accountId> --gas=300000000000000
+```
+##### Withdraw
+
+Unstaking takes 2-3 epochs to complete, after that period you can withdraw in YoctoNEAR from pool.
+
+Command:
+```
+near call <staking_pool_id> withdraw '{"amount": "<amount yoctoNEAR>"}' --accountId <accountId> --gas=300000000000000
+```
+Command to withdraw all:
+```
+near call <staking_pool_id> withdraw_all --accountId <accountId> --gas=300000000000000
+```
+
+##### Ping
+A ping issues a new proposal and updates the staking balances for your delegators. A ping should be issued each epoch to keep reported rewards current.
+
+Command:
+```
+near call <staking_pool_id> ping '{}' --accountId <accountId> --gas=300000000000000
+```
+Balances
+Total Balance
+Command:
+```
+near view <staking_pool_id> get_account_total_balance '{"account_id": "<accountId>"}'
+```
+##### Staked Balance
+Command:
+```
+near view <staking_pool_id> get_account_staked_balance '{"account_id": "<accountId>"}'
+```
+##### Unstaked Balance
+Command:
+```
+near view <staking_pool_id> get_account_unstaked_balance '{"account_id": "<accountId>"}'
+```
+##### Available for Withdrawal
+You can only withdraw funds from a contract if they are unlocked.
+
+Command:
+```
+near view <staking_pool_id> is_account_unstaked_balance_available '{"account_id": "<accountId>"}'
+```
+##### Pause / Resume Staking
+###### Pause
+Command:
+```
+near call <staking_pool_id> pause_staking '{}' --accountId <accountId>
+```
+###### Resume
+Command:
+```
+near call <staking_pool_id> resume_staking '{}' --accountId <accountId>
+```
 
 ## Next challenge lets gooo
 
