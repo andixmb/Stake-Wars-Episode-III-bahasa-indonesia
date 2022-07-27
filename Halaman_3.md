@@ -93,7 +93,7 @@ near call <staking_pool_id> withdraw_all --accountId <accountId> --gas=300000000
 ```
 
 ##### Ping
-A ping issues a new proposal and updates the staking balances for your delegators. A ping should be issued each epoch to keep reported rewards current.
+Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini. untuk menghindari agar anda tidak dikeluarkan dari validator.
 
 Command:
 ```
