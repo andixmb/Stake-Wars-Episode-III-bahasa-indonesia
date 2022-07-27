@@ -1,3 +1,28 @@
+# Disini saya merangkum beberapa masalah dan cara penyelesaianya silahkan merujuk ke dokumentasi ini jika ada error saat melakukan instalasi node validator
+
+## Jika anda mendapat error saat menjalankan node awal seperti contoh dibawah ini :
+<img width="1460" alt="Jepretan Layar 2022-07-27 pukul 01 15 53" src="https://user-images.githubusercontent.com/55140596/181187422-f3960ae7-ba3f-4296-af21-67f36179e63c.png">
+
+Lakukan kill pada proses pid user neard itu akan mengehentikan semua layanan dan kamu bisa memulai lagi node anda.
+
+Cek proses yang berjalan.
+````
+top
+````
+
+<img width="638" alt="Jepretan Layar 2022-07-27 pukul 01 16 06" src="https://user-images.githubusercontent.com/55140596/181187481-989e8f61-885d-44bf-a1f2-8f21e50f4d91.png">
+
+kill proses pid neard
+
+contoh :
+````
+kill 41570
+````
+* *ganti_dengan_nomer_pid kalian*
+
+setelah itu anda bisa kembali memulai menjalankan node anda.
+
+
 # Untuk "node not producing" 😢😢
 
 coba ini  :
