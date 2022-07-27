@@ -21,7 +21,7 @@ Seperti dokumen sebelumnya file log sudah anda buat
 ### Check Logs
 Systemd Command:
 ```
-journalctl -n 100 -f -u neard | ccze -A
+journalctl -n 100 -f -u neard
 ```
 ### Check Status Node
 ````
@@ -38,16 +38,14 @@ INFO stats: #85079829 H1GUabkB7TW2K2yhZqZ7G47gnpS7ESqicDMNyb9EE6tf Validator 73 
 * **Validator**: "Validator" akan menunjukkan bahwa Anda adalah validator aktif
 * **73 validators**: Total 73 validator di jaringan
 * **30 peers**: Saat ini Anda memiliki 30 peers. Anda membutuhkan setidaknya 3 peers untuk mencapai konsensus dan mulai memvalidas
-* **#46199418**: block – blok – Pastikan blok bergerak
+* **#85079829**: block – blok – Pastikan blok bergerak
 
 #### RPC
-Selama port tersebut terbuka di firewall node. NEAR-CLI menggunakan panggilan RPC di belakang layar. Penggunaan umum untuk RPC adalah untuk memeriksa statistik validator, versi node dan untuk melihat saham delegator, meskipun dapat digunakan untuk berinteraksi dengan blockchain, akun, dan kontrak secara keseluruhan.
+Selama port 3030 tersebut terbuka di firewall node. NEAR-CLI menggunakan panggilan RPC di belakang layar. Penggunaan umum untuk RPC adalah untuk memeriksa statistik validator, versi node dan untuk melihat saham delegator, meskipun dapat digunakan untuk berinteraksi dengan blockchain, akun, dan kontrak secara keseluruhan.
 
 Temukan banyak perintah dan cara menggunakannya secara lebih rinci di sini:
 
 https://docs.near.org/docs/api/rpc
-
-
 
 Command:
 ```
