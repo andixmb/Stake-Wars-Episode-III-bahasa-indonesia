@@ -59,6 +59,8 @@ near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet
 ## Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini. untuk menghindari agar anda tidak dikeluarkan dari validator.
 
 ## Pasang Script Auto Ping Ada di Halaman 6 untuk challenge 6
+[Auto Ping.](./Halaman_6.md).
+
 #### Panduan Transactions
 ##### Deposit and Stake NEAR
 
