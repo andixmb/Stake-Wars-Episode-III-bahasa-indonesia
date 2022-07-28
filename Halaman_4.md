@@ -1,5 +1,8 @@
 # Stake Wars: Episode III. Challenge 004
 
+* Submitted by: Open Shards Alliance
+* Rewards: 15 Unlocked NEAR Points (UNP)
+
 Siapkan Tools untuk memantau status Node. Instal dan gunakan RPC pada port 3030 untuk mendapatkan informasi berguna agar Node Anda tetap berfungsi.
 
 ## Link wallet dan explorer
