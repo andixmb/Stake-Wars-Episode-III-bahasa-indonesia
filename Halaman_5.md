@@ -17,7 +17,7 @@ Ikuti panduan tantangan Stake Wars III:
 * [ Siapkan Simpul Anda](https://github.com/andixfaizan/Stake-Wars-Episode-III-bahasa-indonesia/blob/main/Halaman_1.md)
 * [ Siapkan validator dan sinkronkan dengan keadaan jaringan. ](https://github.com/andixfaizan/Stake-Wars-Episode-III-bahasa-indonesia/blob/main/Halaman_2.md)
 * [ Terapkan pool staking baru untuk validator Anda. ](https://github.com/andixfaizan/Stake-Wars-Episode-III-bahasa-indonesia/blob/main/Halaman_3.md)
-* [ Siapkan Tools untuk memantau status simpul. ](https://github.com/near/stakewars-iii/blob/main/challenges/004.md)
+* [ Siapkan Tools untuk memantau status simpul. ](https://github.com/andixfaizan/Stake-Wars-Episode-III-bahasa-indonesia/blob/main/Halaman_4.md)
 
 
 ##  Hasil Kerja
