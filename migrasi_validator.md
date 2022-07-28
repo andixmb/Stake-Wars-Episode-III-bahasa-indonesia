@@ -1,4 +1,4 @@
-# Migrasikan validator Anda ke Vm lain.
+# Migrasikan validator Anda ke Virtual machine baru.
 
 ### 1. Sebelum migrasi ke mesin baru backup dahulu file node_key.json dan validator_key.json anda.
 ````
@@ -158,7 +158,16 @@ Cek Log Lagi Jika Masih Error Coba Restar Lagi Dan Check Log Lagi
 `Jika log masih error coba restar vps atau matikan hidupkan lagi vps `
 
 
-### 7. Lakukan Ping dan pasang Sciprt Auto Ping
+### 7. Lakukan Ping dan pasang Sciprt Auto Ping.
+````
+near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet.near --gas=300000000000000
+````
+* **Ganti cenbacen dengan nama wallet kamu**
+
+## Ping untuk mengeluarkan proposal baru dan memperbarui saldo staking untuk delegator Anda. Ping harus dikeluarkan setiap epoch untuk menjaga agar hadiah yang dilaporkan tetap terkini. untuk menghindari agar anda tidak dikeluarkan dari validator.
+
+## Pasang Script Auto Ping Ada di Halaman 6 untuk challenge 6
+[Auto Ping.](./Halaman_6.md)
 
 
 
