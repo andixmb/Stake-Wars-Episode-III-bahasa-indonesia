@@ -1,4 +1,8 @@
 # Stake Wars: Episode III. Challenge 001
+* Submitted by: Open Shards Alliance
+* Rewards: unlocked at the end of Challenge 002.
+
+### Buat dompet Shardnet Anda & gunakan CLI Near. Ini dirancang untuk menjadi tantangan pertama Anda: gunakan untuk memahami cara kerja staking di NEAR.
 
 ![near](https://user-images.githubusercontent.com/55140596/180490035-30649ad1-e6fe-461e-8005-16f5bb25803f.png)
 
