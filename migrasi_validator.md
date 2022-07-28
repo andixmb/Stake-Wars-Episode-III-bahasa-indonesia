@@ -10,11 +10,12 @@ cat node_key.json
 ````
 cat validator_key.json 
 ````
-Pastikan pula anda memiliki akses kw wallet shardnet anda.
+* *Simpan semua kedalam notepad anda*
 
-Simpan semua backup file ke notepad anda.
+Pastikan pula anda memiliki akses ke wallet shardnet anda.
 
-Saatnya menjalankan full node di mesin baru.
+
+# Saatnya menjalankan full node di mesin baru.
 
 ### 2. Jalankan full node ke virtual machine baru
 
@@ -24,10 +25,143 @@ Silahkan mengikuti panduan ini sampai halaman 2 [Setup and Run your Node](./Hala
 
 Sebelum mematikan node dan validator di mesin lama cek ketinggian block pada node lama dan node baru.
 
-check di node lama.
+Pastikan ketinggian block pada msein baru lebih tinggi dari pada mesin lama.
+
+Anda bisa mematikan validator lama dan menonaktifkan system di validator lama.
 ````
-journalctl -n 100 -f -u neard | grep "INFO stats"
+sudo systemctl stop neard
 ````
+````
+sudo systemctl disable neard
+````
+### 4. Salin semua file node_key.json dan validator_key.json di mesin baru.
+````
+cd .near
+````
+nano node_key.json
+````
+* *Salin Node_key.json di validator lama ke vakidator baru*
+
+Check Validator_key.json di mesin baru jika belum ada filenya anda bisa membuatnya disini.
+
+````
+near generate-key <pool_id>
+````
+<pool_id> ---> anda bisa membuatnya sama dengan nama yang lama.
+* Copy the file generated ke shardnet folder:
+````
+cp ~/.near-credentials/shardnet/YOUR_WALLET.json ~/.near/validator_key.json
+````
+YOUR_WALLET ganti dengan nama yang anda buat sebelumnya.
+Masuk ke folder validator_key.json
+````
+cd .near
+````
+````
+nano validator_key.json
+````
+### 5. Login wallet Shardnet Near kamu.
+````
+near login
+````
+* *Login seperti biasanya*
+
+### 6. Edit systemd dan Jalankan Node.
+
+```
+sudo nano /etc/systemd/system/neard.service
+```
+Paste:
+Jika anda mengunakan vps digital ocean silahkan menggunakan ini.
+````
+[Unit]
+Description=NEARd Daemon Service
+
+[Service]
+Type=simple
+User=root
+#Group=near
+WorkingDirectory=/root/.near
+ExecStart=/root/nearcore/target/release/neard run
+Restart=on-failure
+RestartSec=30
+KillSignal=SIGINT
+TimeoutStopSec=45
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+````
+Dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan direktori vps yang kalian gunakan
+Perhatikan di bagian 
+WorkingDirectory
+dan
+ExecStart
+```
+[Unit]
+Description=NEARd Daemon Service
+[Service]
+Type=simple
+User=<USER>
+#Group=near
+WorkingDirectory=/home/<USER>/.near
+ExecStart=/home/<USER>/nearcore/target/release/neard run
+Restart=on-failure
+RestartSec=30
+KillSignal=SIGINT
+TimeoutStopSec=45
+KillMode=mixed
+[Install]
+WantedBy=multi-user.target
+```
+> Note: Ubah USER dengan paths kamu
+> Cara keluar dari Vim :x lalu enter
+> cara edit Vim tekan S lalu keluar dari edit esc
+> lalu keluar dari Vim
+Langkah Selanjutnya aktifkan systemctl
+Command:
+```
+sudo systemctl enable neard
+```
+Command:
+```
+sudo systemctl start neard
+```
+Jika Anda perlu melakukan perubahan pada layanan karena kesalahan dalam file. Itu harus dimuat ulang:
+````
+sudo systemctl reload neard
+````
+
+Jika Terdapat Log
+* **No Journal files were found**
+Lakukan Perintah Ini
+````
+sudo nano /etc/systemd/journald.conf
+````
+Ubah Config
+````
+[Journal]
+#Storage=auto
+...
+````
+Menjadi 
+````
+[Journal]
+Storage=persistent
+...
+````
+Dan lakukan Restart 
+````
+sudo systemctl restart systemd-journald
+````
+Cek Log Lagi Jika Masih Error Coba Restar Lagi Dan Check Log Lagi
+`Jika log masih error coba restar vps atau matikan hidupkan lagi vps `
+
+
+### 7. Lakukan Ping dan pasang Sciprt Auto Ping
+
+
+
 
 
 
