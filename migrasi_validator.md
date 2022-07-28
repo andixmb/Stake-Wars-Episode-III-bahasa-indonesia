@@ -176,3 +176,7 @@ near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet
 
 ## Pasang Script Auto Ping Ada di Halaman 6 untuk challenge 6
 [Auto Ping.](./Halaman_6.md)
+
+Pastikan Node baru mendapatkan Block dan masuk di List Validator sebagai proposal yang selanjutnya akan menjadi validator aktif.
+
+* *Setelah itu anda dapat mematikan server di validator lama*
