@@ -1,5 +1,8 @@
 # Stake Wars: Episode III. Challenge 005
 
+* Submitted by: Meta Pool
+* Rewards: 10 Delegated NEAR Points (DNP)
+
 Siapkan node validator yang berjalan untuk shardnet di salah satu penyedia cloud paling populer dan dokumentasikan prosesnya untuk membuat artikel tentangnya.
 
 * Layanan Web Amazon
