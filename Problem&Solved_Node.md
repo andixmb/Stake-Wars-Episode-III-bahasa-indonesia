@@ -41,6 +41,37 @@ near call <POOL_ID> update_staking_key '{"stake_public_key": "<PUBLIC_KEY>"}' --
 ````
 
 Jika cocok:
+
 Periksa validator_key.json
+
 account_id harus seperti : xx.factory.shardnet.near
+
 If not update it, save and stop/start neard 😉
+
+## A hardfork is announced, what should I do? (For shardnet on July 2022)
+
+On July 27th a third hardfork was done during stake wars to Shardnet. This for upgrading core code and keep nodes with higher stability.
+
+Run the following to upgrade:
+
+````
+sudo systemctl stop neard
+rm ~/.near/data/*
+
+cd ~/nearcore
+git fetch
+git checkout 0d7f272afabc00f4a076b1c89a70ffc62466efe9
+cargo build -p neard --release --features shardnet
+
+cd ~/.near
+rm genesis.json
+wget https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json
+
+rm ~/.near/config.json
+wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
+
+sudo systemctl start neard && journalctl -n 100 -f -u neard | ccze -A
+````
+
+Also, if you owner account or staking pool doesn't appear is probably that it was removed during hard fork. Make those again.
+
