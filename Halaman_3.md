@@ -1,5 +1,9 @@
 # Stake Wars: Episode III. Challenge 003
 
+* Submitted by: Open Shards Alliance
+* Rewards: 10 Unlocked NEAR Points (UNP)
+
+
 ## Terapkan kumpulan staking baru untuk validator Anda. Lakukan operasi pada staking pool Anda untuk mendelegasikan dan stake DEKAT.
 
 ### Sebelum memulai pastikan node anda sudah men-download block 100% jika anda masih melihat logs ( block downloads ) jangan pernah mencoba membuat kumpulan dan mendelegasikan NEAR. Anda akan menyerang jaringan dan jika semua orang melakukan hal itu jaringan akan DOWN tolong untuk tetap mengikuti peraturan.
