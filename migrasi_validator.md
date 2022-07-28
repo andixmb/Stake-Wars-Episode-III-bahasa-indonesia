@@ -14,7 +14,6 @@ cat validator_key.json
 
 Pastikan pula anda memiliki akses ke wallet shardnet anda.
 
-
 # Saatnya menjalankan full node di mesin baru.
 
 ### 2. Jalankan full node ke virtual machine baru
@@ -26,9 +25,9 @@ Check node baru sampai status false
 apt install jq
 ````
 ````
-curl -s http://127.0.0.1:3030/status | jq .sync_info | grep syncing
+curl -s http://127.0.0.1:3030/status | jq .sync_info
 ````
-status harus : "syncing": false,
+status harus : "false"
 
 ### 3. Tunggu hingga Node penuh di mesin baru selesai dan selesai mendownload HEADERS DAN BLOCK.
 
