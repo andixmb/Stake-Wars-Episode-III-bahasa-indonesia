@@ -1,5 +1,8 @@
 # Stake Wars: Episode III. Challenge 002
 
+* Submitted by: Open Shards Alliance
+* Rewards: 30 Unlocked NEAR Points (UNP)
+
 ## Tantangan ini difokuskan pada penerapan node (nearcore), mengunduh snapshot, menyinkronkannya ke keadaan jaringan yang sebenarnya, kemudian mengaktifkan node sebagai validator.
 
 ##### Prerequisites:
