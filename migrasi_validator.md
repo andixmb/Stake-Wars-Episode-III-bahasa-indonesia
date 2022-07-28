@@ -21,6 +21,15 @@ Pastikan pula anda memiliki akses ke wallet shardnet anda.
 
 Silahkan mengikuti panduan ini sampai halaman 2 [Setup and Run your Node](./Halaman_1.md)
 
+Check node baru sampai status false
+````
+apt install jq
+````
+````
+curl -s http://127.0.0.1:3030/status | jq .sync_info | grep syncing
+````
+status harus : "syncing": false,
+
 ### 3. Tunggu hingga Node penuh di mesin baru selesai dan selesai mendownload HEADERS DAN BLOCK.
 
 Sebelum mematikan node dan validator di mesin lama cek ketinggian block pada node lama dan node baru.
