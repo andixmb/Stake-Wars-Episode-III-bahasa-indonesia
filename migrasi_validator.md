@@ -1,4 +1,4 @@
-# Migrasikan validator Anda ke Virtual machine baru.
+# Migrasikan validator Anda ke Virtual Machine Baru.
 
 ### 1. Sebelum migrasi ke mesin baru backup dahulu file node_key.json dan validator_key.json anda.
 ````
@@ -38,21 +38,23 @@ sudo systemctl disable neard
 ````
 cd .near
 ````
+````
 nano node_key.json
 ````
-* *Salin Node_key.json di validator lama ke vakidator baru*
+* *Salin Node_key.json di validator lama ke validator baru*
 
 Check Validator_key.json di mesin baru jika belum ada filenya anda bisa membuatnya disini.
-
 ````
 near generate-key <pool_id>
 ````
 <pool_id> ---> anda bisa membuatnya sama dengan nama yang lama.
-* Copy the file generated ke shardnet folder:
+
+Copy the file generated ke shardnet folder:
 ````
 cp ~/.near-credentials/shardnet/YOUR_WALLET.json ~/.near/validator_key.json
 ````
 YOUR_WALLET ganti dengan nama yang anda buat sebelumnya.
+
 Masuk ke folder validator_key.json
 ````
 cd .near
@@ -60,6 +62,8 @@ cd .near
 ````
 nano validator_key.json
 ````
+* *Masukkan Private_key.json lama ke Validator yang baru.*
+
 ### 5. Login wallet Shardnet Near kamu.
 ````
 near login
@@ -68,11 +72,11 @@ near login
 
 ### 6. Edit systemd dan Jalankan Node.
 
-```
+````
 sudo nano /etc/systemd/system/neard.service
-```
+````
 Paste:
-Jika anda mengunakan vps digital ocean silahkan menggunakan ini.
+Jika anda mengunakan vps digital ocean silahkan menggunakan ini atau anda menjalankan di mode root.
 ````
 [Unit]
 Description=NEARd Daemon Service
@@ -93,11 +97,15 @@ KillMode=mixed
 WantedBy=multi-user.target
 ````
 Dibawah ini adalah path asli yang bisa anda rubah menyesuaikan dengan direktori vps yang kalian gunakan
+
 Perhatikan di bagian 
+
 WorkingDirectory
+
 dan
+
 ExecStart
-```
+````
 [Unit]
 Description=NEARd Daemon Service
 [Service]
@@ -113,27 +121,27 @@ TimeoutStopSec=45
 KillMode=mixed
 [Install]
 WantedBy=multi-user.target
-```
+````
 > Note: Ubah USER dengan paths kamu
-> Cara keluar dari Vim :x lalu enter
-> cara edit Vim tekan S lalu keluar dari edit esc
-> lalu keluar dari Vim
+
 Langkah Selanjutnya aktifkan systemctl
 Command:
-```
+````
 sudo systemctl enable neard
-```
+````
 Command:
-```
+````
 sudo systemctl start neard
-```
+````
 Jika Anda perlu melakukan perubahan pada layanan karena kesalahan dalam file. Itu harus dimuat ulang:
 ````
 sudo systemctl reload neard
 ````
 
 Jika Terdapat Log
+
 * **No Journal files were found**
+
 Lakukan Perintah Ini
 ````
 sudo nano /etc/systemd/journald.conf
@@ -155,8 +163,8 @@ Dan lakukan Restart
 sudo systemctl restart systemd-journald
 ````
 Cek Log Lagi Jika Masih Error Coba Restar Lagi Dan Check Log Lagi
-`Jika log masih error coba restar vps atau matikan hidupkan lagi vps `
 
+`Jika log masih error coba restar vps atau matikan hidupkan lagi vps `
 
 ### 7. Lakukan Ping dan pasang Sciprt Auto Ping.
 ````
@@ -168,9 +176,3 @@ near call cenbacen.factory.shardnet.near ping '{}' --accountId cenbacen.shardnet
 
 ## Pasang Script Auto Ping Ada di Halaman 6 untuk challenge 6
 [Auto Ping.](./Halaman_6.md)
-
-
-
-
-
-
