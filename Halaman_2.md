@@ -66,7 +66,7 @@ git fetch
 ```
 #### Checkout ke komit yang diperlukan
 ````
-git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
+git checkout c1b047b8187accbf6bd16539feb7bb60185bdc38
 ````
 #### Compile `nearcore` binary
 
