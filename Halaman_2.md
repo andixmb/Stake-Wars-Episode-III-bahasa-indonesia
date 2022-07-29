@@ -63,6 +63,9 @@ Pertama, clone the [`nearcore` repository](https://github.com/near/nearcore).
 git clone https://github.com/near/nearcore
 ````
 ````
+cd nearcore
+````
+````
 git fetch
 ````
 #### Checkout ke komit yang diperlukan
