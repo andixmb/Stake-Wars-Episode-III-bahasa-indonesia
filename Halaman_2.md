@@ -59,11 +59,12 @@ source $HOME/.cargo/env
 #### Clone `nearcore` project from GitHub
 Pertama, clone the [`nearcore` repository](https://github.com/near/nearcore).
 
-```
+````
 git clone https://github.com/near/nearcore
-cd nearcore
+````
+````
 git fetch
-```
+````
 #### Checkout ke komit yang diperlukan
 ````
 git checkout c1b047b8187accbf6bd16539feb7bb60185bdc38
