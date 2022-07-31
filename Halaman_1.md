@@ -17,6 +17,8 @@
 ### List Challenge 
 https://github.com/near/stakewars-iii/blob/main/challenges/challenge-summary.md
 
+### Create Wallet Near Mainet
+https://wallet.near.org/
 
 ### Siapkan simpul Anda
 #### Persyaratan Minimum Server
