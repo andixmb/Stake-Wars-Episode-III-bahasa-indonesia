@@ -199,18 +199,16 @@ near login
 
 ![3](https://user-images.githubusercontent.com/55140596/180243146-f67ae837-4b06-4917-ab6d-c6d4e4ae5aad.png)
 
-3 – Paste nama wallet ke console dan enter kamu akan melihat sukses menautkan wallet dengan console anda
-
-![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
-
-4 – Setelah Grant, kamu akan melihat halaman browser error, kembali ke console
+3 – Setelah Grant, kamu akan melihat halaman browser error, kembali ke console
 
 ![4](https://user-images.githubusercontent.com/55140596/180243152-396aaa63-f166-4984-a0d1-94dc56173db5.png)
 
+4 – Paste nama wallet ke console dan enter kamu akan melihat sukses menautkan wallet dengan console anda
 
+![5](https://user-images.githubusercontent.com/55140596/180243166-6336f82b-bf49-4a87-8799-fd0df621da12.png)
 
 catatan :
-Jika terjadi error saat login wallet ulangi dari awal dan lakukan otorisasi wallet dengan browser lain dan jangan pernah mencoba mengunakan wallet lain cukup dengan wallet sebelumnya lakukan import pharse dan ulangi otorisasi wallet.
+Jika terjadi error saat login wallet jangan paste wallet ke terminal dahulu lihat di browsure kalian sampai menunjukkan seperti gambar no.3 baru login ke wallet kalian di terminal
 
 
 #####  Check the validator_key.json
