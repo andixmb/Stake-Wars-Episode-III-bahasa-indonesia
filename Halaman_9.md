@@ -50,8 +50,8 @@ ip6tables-save > /etc/iptables/rules.v6
 ```
 
 #### Validasi port terbuka dengan mengunjungi
-`http://<IP ANDA>:3030/status
-**CATATAN:** ​​_Dalam beberapa kasus, port mungkin juga perlu dibuka di firewall penyedia cloud/pusat data Anda._
+http://<IP ANDA>:3030/status
+**CATATAN:** ​​_Dalam beberapa kasus, port mungkin juga perlu dibuka di firewall penyedia cloud/pusat data Anda.
 ## Kriteria penerimaan:
 * Validator melaporkan di atas 70%
 * Port dapat diakses secara publik `http://<IP Address>:3030/status`
