@@ -44,7 +44,7 @@ CONTRACT_ID=<OWNER_ID>.shardnet.near
 
 NEAR_ENV=shardnet near call $CONTRACT_ID new '{"staking_pool_account_id": "<STAKINGPOOL_ID>.factory.shardnet.near", "owner_id":"<OWNER_ID>.shardnet.near", "reward_receivers": [["<SPLITED_ACCOUNT_ID_1>.shardnet.near", {"numerator": 3, "denominator":10}], ["<SPLITED_ACCOUNT_ID_2>.shardnet.near", {"numerator": 70, "denominator":100}]]}' --accountId $CONTRACT_ID
 ```
-* *Split account id pertama bisa anda beri nama saya "cenbacen" dan split_account_id_2 bisa beri nama validator anda.
+* *Split account id pertama bisa anda beri nama saya "cenbacen" dan split_account_id_2 bisa beri nama validator orang lain.
 
 Tunggu beberapa jam hingga dan anda siap untuk menarik hadiah.
 
@@ -63,7 +63,6 @@ NEAR_ENV=shardnet near call $CONTRACT_ID withdraw '{}' --accountId $CONTRACT_ID 
 * URL Tantangan: Tautan ke penjelajah transaksi *penarikan* Anda.
 * Gambar tantangan: Tangkapan layar transaksi distribusi token.
 
-![img](./images/split-log.png)
 
 [Submit the form](https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform) with your distribution transactions.
 
