@@ -33,7 +33,7 @@ status harus : "false"
 
 Sebelum mematikan node dan validator di mesin lama cek ketinggian block pada node lama dan node baru.
 
-Pastikan ketinggian block pada msein baru lebih tinggi dari pada mesin lama.
+Pastikan ketinggian block pada mesin baru lebih tinggi dari pada mesin lama.
 
 Anda bisa mematikan validator lama dan menonaktifkan system di validator lama.
 ````
