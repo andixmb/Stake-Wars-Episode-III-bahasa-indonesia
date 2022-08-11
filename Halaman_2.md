@@ -72,6 +72,8 @@ git fetch
 ````
 git checkout 68bfa84ed1455f891032434d37ccad696e91e4f5
 ````
+Checkout to the commit needed. Please refer to the commit defined in [this file](https://github.com/near/stakewars-iii/blob/main/commit.md). 
+
 #### Compile `nearcore` binary
 
 Di folder `nearcore` jalankan perintah berikut:
