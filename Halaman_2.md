@@ -24,10 +24,11 @@ sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev l
 ```
 
 ##### Jika Terjadi Problem silahkan ikuti intruksi ini :
-````
+
+```
 sudo apt install python3
-````
-````
+```
+```
 sudo apt install docker-ce
 ```
 
