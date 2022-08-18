@@ -20,8 +20,17 @@ Hasil
 
 ##### Install developer tools:
 ```
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python2-minimal docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python3 docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
 ```
+
+##### Jika Terjadi Problem silahkan ikuti intruksi ini :
+```
+sudo apt install python3
+````
+````
+sudo apt install docker-ce
+```
+
 #####  Install Python pip:
 
 ```
