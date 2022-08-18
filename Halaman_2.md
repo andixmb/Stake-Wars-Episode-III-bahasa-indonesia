@@ -80,9 +80,9 @@ git fetch
 ````
 #### Checkout ke komit yang diperlukan
 ````
-git checkout 68bfa84ed1455f891032434d37ccad696e91e4f5
+git checkout f7f0cb22e85e9c781a9c71df7dcb17f507ff6fde
 ````
-Checkout to the commit needed. Please refer to the commit defined in [this file](https://github.com/near/stakewars-iii/blob/main/commit.md). 
+Checkout to the commit needed. selalu lihat commit yang diperbarui [this file](https://github.com/near/stakewars-iii/blob/main/commit.md). 
 
 #### Compile `nearcore` binary
 
